@@ -68,6 +68,9 @@ jobs:
       - name: Static HTML export with Vue3
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
 
+      - name: copy index.html to 404.html
+        run: cp ./dist/index.html ./dist/404.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
