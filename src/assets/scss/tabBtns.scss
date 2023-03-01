@@ -1,0 +1,72 @@
+.tab-box{
+	position: absolute;
+	bottom: 1.8rem;
+
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	button{
+		width: 8.7rem;
+		height: 2.7rem;
+
+		border: 1.5px solid var(--bg-background);
+		background-color: rgba(255,255,255, 0.1);
+		backdrop-filter: blur(15px);
+
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		gap: .5rem;
+
+		@media (max-width: 1128px) {
+			width: auto;
+			height: auto;
+			padding: .5rem;
+		}
+		span{
+			color: #C1B494;
+			&:first-child{
+				display: inline-block;
+				width: 1.35rem;
+				height: 1.35rem;
+				background-size: contain;
+				background-repeat: no-repeat;
+				svg{
+					width: 100%;
+					height: 100%;
+					stroke: none;
+					fill: none;
+				}
+				
+				&.photo svg,
+				&.around svg{
+					stroke:var(--color-heading);
+				}
+				&.cube svg{
+					fill:var(--color-heading);
+				}
+			}
+		}
+		&.active{
+			background: var(--bg-background);
+			span{
+				color: var(--color-link);
+				&:first-child{
+					&.photo svg,
+					&.around svg{
+						stroke: var(--color-link);
+					}
+					&.cube svg{
+						fill: var(--color-link);
+					}
+				}
+			}
+		}
+		&:hover{
+			backdrop-filter: blur(30px);
+		}
+	}
+}

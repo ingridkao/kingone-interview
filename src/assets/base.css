@@ -2,6 +2,7 @@
 :root {
   --vt-c-main: rgba(193, 180, 148, 0.9);
   --vt-c-main-text: rgb(193, 180, 148);
+  --vt-c-main-green: #6CB3AF;
 
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
@@ -11,20 +12,9 @@
   --vt-c-black-soft: #515056;
   --vt-c-black-mute: #282828;
 
-  --vt-c-indigo: #2c3e50;
-
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
-
   --vt-c-text-light-1: var(--vt-c-black);
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
 
-  --vt-c-link-1: hsla(160, 100%, 37%, 1);
-  --vt-c-link-2: hsla(160, 100%, 30%, 1);
 }
 
 /* semantic color variables for this project */
@@ -32,11 +22,7 @@
   --bg-background: var(--vt-c-main);
 
   --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
+  --color-background-green: var(--vt-c-main-green);
 
   --color-heading: var(--vt-c-main-text);
   --color-heading2: var(--vt-c-black-soft:);
@@ -46,26 +32,21 @@
   --color-link:  var(--vt-c-white);
   --color-link-hover: var(--vt-c-link-2);
 
-  --section-gap: 160px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-background: var(--vt-c-main);
 
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-heading2: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
-    --color-text-hover: var(--vt-c-text-dark-2);
-
-    --color-link: var(--vt-c-link-1);
+    --color-background: var(--vt-c-white);
+    --color-background-green: var(--vt-c-main-green);
+  
+    --color-heading: var(--vt-c-main-text);
+    --color-heading2: var(--vt-c-black-soft:);
+    --color-text: var(--vt-c-text-light-1);
+    --color-text-hover: var(--vt-c-text-light-2);
+  
+    --color-link:  var(--vt-c-white);
     --color-link-hover: var(--vt-c-link-2);
   }
 }
@@ -79,17 +60,13 @@
   font-weight: normal;
 }
 
-body {
-  min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
-  transition: color 0.5s, background-color 0.5s;
+a {
+  text-decoration: none; 
+}
 
-  font-size: 20px;
-  line-height: 1.6;
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+button{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: transparent;
 }

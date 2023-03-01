@@ -1,5 +1,25 @@
 @import '../base.css';
 
+body{
+    min-height: 100vh;
+    color: var(--color-text);
+    overflow: hidden;
+    background: var(--color-background);
+    transition: color 0.5s, background-color 0.5s;
+  
+    font-size: 20px;
+    line-height: 1.6;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media (max-width: 1128px) {
+        font-size: 12px;
+    }
+}
+
 #app {
     width: 100vw;
     height: 100vh;
@@ -16,6 +36,9 @@
     align-items: center;
 
     padding: 1.8rem;
+    @media (max-width: 1128px) {
+        padding: 0.5rem;
+    }
 }
   
 .fade-enter-active,
