@@ -20,16 +20,22 @@
 		width: 50%;
 		height: 75vh;
 		&.img-wrapper{
+			display: inline-flex;
 			position: relative;
 			background-color: #6CB3AF;
-			padding: 1.8rem;
+			&::before,
+			&::after{
+				content: '';
+				display: inline-block;
+				width: 1.8rem;
+				height: 100%;
+				background-color: #6CB3AF;
+			}
 			.img-box{
-				position: absolute;
-				top: 5%;
-				left: 1.8rem;
 				width: calc(100% - 3.6rem);
 				height: 100%;
 				background-image: url(../img/tma-2.jpeg);
+				background-position: center;
 				background-size: contain;
 				background-repeat: no-repeat;
 			}
