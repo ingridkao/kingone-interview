@@ -1,0 +1,125 @@
+.card-wrapper{
+	width: 90vw;
+	margin: 2rem;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+
+	&::before{
+		content: '';
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		z-index: 0;
+		background-color: var(--bg-background);
+		opacity: 0.9;
+	}
+	>div{
+		width: 50%;
+		height: 75vh;
+		&.img-wrapper{
+			position: relative;
+			background-color: #6CB3AF;
+			padding: 1.8rem;
+			.img-box{
+				position: absolute;
+				top: 5%;
+				left: 1.8rem;
+				width: calc(100% - 3.6rem);
+				height: 100%;
+				background-image: url(../img/tma-2.jpeg);
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			.tab-box{
+				position: absolute;
+				bottom: 1.8rem;
+
+				width: 100%;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: center;
+				align-items: center;
+				button{
+					width: 8.7rem;
+					height: 2.7rem;
+					outline: none;
+					border: none;
+					cursor: pointer;
+					border: 1px solid var(--bg-background);
+					background-color: rgba(255,255,255, 0.1);
+					backdrop-filter: blur(15px);
+
+					display: flex;
+					flex-flow: row wrap;
+					justify-content: center;
+					align-items: center;
+					gap: .5rem;
+
+					span{
+						color: #C1B494;
+						&:first-child{
+							display: inline-block;
+							width: 1.35rem;
+							height: 1.35rem;
+							background-size: contain;
+							background-repeat: no-repeat;
+							svg{
+								width: 100%;
+								height: 100%;
+							}
+							&.around svg{
+								stroke:#C1B494;
+							}
+							&.photo svg,
+							&.cube svg{
+								fill:#C1B494;
+							}
+						}
+					}
+					&.active{
+						background: var(--bg-background);
+						span{
+							color: var(--color-link);
+							&:first-child{
+								&.photo svg,
+								&.around svg{
+									stroke: var(--color-link);
+								}
+								&.cube svg{
+									fill: var(--color-link);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.text-wrapper{
+			overflow-y: scroll;
+			overflow-x: hidden;
+
+			background: var(--color-background);
+			padding: 2.7rem;
+			h6{
+				color: var(--color-heading2);
+				font-size: 1.2rem;
+				line-height: 1.4rem;
+				margin-bottom: 1.2rem;
+			}
+			h5{
+				color: var(--color-heading);
+				font-size: 1.35rem;
+				line-height: 1.6rem;
+				margin-bottom: 3rem;
+			}
+			p{
+				color: var(--color-text);
+				font-size: 1.125rem;
+				line-height: 2.025rem;
+			}
+		}
+	}
+}
