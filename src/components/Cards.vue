@@ -1,5 +1,4 @@
 <script setup>
-import WelcomeItem from './WelcomeItem.vue'
 import '@/assets/scss/card.scss'
 
 </script>

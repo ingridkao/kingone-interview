@@ -1,8 +1,7 @@
-<template>
-  <main class="video">
-    <h1>This is an video page</h1>
-  </main>
-</template>
+<script setup>
+  import Cards from '../components/Cards.vue'
+</script>
 
-<style>
-</style>
+<template>
+	<Cards />
+</template>

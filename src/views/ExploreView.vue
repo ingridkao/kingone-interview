@@ -1,8 +1,7 @@
-<template>
-  <main class="explore">
-    <h1>This is an explore page</h1>
-  </main>
-</template>
+<script setup>
+  import Cards from '../components/Cards.vue'
+</script>
 
-<style>
-</style>
+<template>
+	<Cards />
+</template>
