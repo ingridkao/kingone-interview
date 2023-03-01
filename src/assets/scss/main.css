@@ -1,0 +1,78 @@
+@import '../base.css';
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsl(160, 100%, 37%);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
+.header-wrapper {
+  line-height: 1.5;
+  max-height: 100vh;
+}
+.header-wrapper .logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+.header-wrapper nav {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+.header-wrapper nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+.header-wrapper nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+.header-wrapper nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .header-wrapper .header-wrapper {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+  .header-wrapper .header-wrapper .logo {
+    margin: 0 2rem 0 0;
+  }
+  .header-wrapper .header-wrapper .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .header-wrapper .header-wrapper nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+}/*# sourceMappingURL=main.css.map */
